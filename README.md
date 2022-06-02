@@ -50,8 +50,7 @@ Portanto, esse script faz o seguinte:<br>
 6. Caso o PING retorne OK, acessa um serviço que retorna o IP público do roteador<br>
 7. Salva em um banco de dados: <i>nome da rede, senha, IP, última vez que acessou a rede</i><br>
 <br>
-E fim.<br>
-<br>
+E fim.
 
 # Extra
 Depois de alguns testes achei divertido não só salvar esses dados, mas também a localização de cada rede encontrada.<br>
