@@ -27,10 +27,26 @@ Temos diversos provedores. A questão é que muitos deles pertecem a outro. X co
 O endereço MAC é tipo um número serial. Ele representa um monte de coisa: fabricante, versão, ano... ele guarda bastante informação. mas voltando pro foco: o endereço MAC compõe a senha do WiFi de casa. E ele tá aberto.<br>
 
 # AA:BB:CC:11:22:33
-Endereços MAC são compostos por 6 blocos de 2 caracteres cada e estão presentes em toda placa que faz algum tipo de comunicação com outra. É uma forma de placas se identificarem entre si. Esse endereço MAC, então, passou a ser usado por provedores de internet para definir a senha do WiFi de um aparelho quando é configurado, antes de ir para o usuário final.
+Endereços MAC são compostos por 6 blocos de 2 caracteres cada e estão presentes em toda placa que faz algum tipo de comunicação com outra. É uma forma de placas se identificarem entre si. Esse endereço MAC, então, passou a ser usado por provedores de internet para definir a senha do WiFi de um aparelho quando é configurado, antes de ir para o usuário final.<br>
 <br>
-Portanto, por um longo período de tempo, os provedores enviavam roteadores/modems usando o MAC inteiro como senha. Até cerca de 2010 era extremamente comum encontrar diversas redes por aí com nomes tipo <b>PROV-2233</b>, sendo "PROV" o nome do provedor e "2233" o final do MAC da placa do roteador. E, adivinhe... a senha era <b>AABBCC112233</b> - o endereço MAC inteiro.
+Portanto, por um longo período de tempo, os provedores enviavam roteadores/modems usando o MAC inteiro como senha. Até cerca de 2010 era extremamente comum encontrar diversas redes por aí com nomes tipo <b>PROV-2233</b>, sendo "PROV" o nome do provedor e "2233" o final do MAC da placa do roteador. E, adivinhe... a senha era <b>AABBCC112233</b> - o endereço MAC inteiro. E ainda tem muito roteador por aí com esse padrão.<br>
 <br>
 Após algum tempo, provedores passaram a adicionar alguns caracteres ao nome da rede que não faziam parte do endereço MAC, para aumentar a dificuldade de pessoas sem permissão acessarem redes com a configuração padrão. Então, começaram a definir senhas como <b>AABBCC1122<i>GG</i></b>, onde "GG" são caracteres que não estão no endereço MAC. Parece um pouco mais seguro, correto? O problema é que esses caracteres "randômicos" (GG nesse exemplo) precisavam estar acessíveis de alguma forma. Então começou-se uma fórmula "genial" de colocar eles no nome da rede. Assim, novas redes vinham definidas da seguinte forma:<br>
+<br>
 Nome: <b>PROV-22GG</b><br>
 Senha: <b>AABBCC1122GG</b>
+<br>
+E é simplesmente por esse tipo de padrão que esse script procura.<br>
+Tendo ficado um pouco à toa durante a pandemia de 2020-2021, lembrei desses padrões bobos e resolvi testar. Tendo 2 provedores contratados (caso um deles caia, o outro deve continuar funcionando), simplesmente olhei atrás dos modems/roteadores e notei que seguiam esses padrões.<br>
+Resolvi então pedir pra alguns amigos enviarem foto da parte de trás dos modems deles e vários seguiam esses padrões; exceto os aparelhos de 5 anos pra cá - nesses a senha não tem absolutamente nenhuma relação com o endereço MAC.<br>
+<br>
+Portanto, esse script faz o seguinte:<br>
+1. Procura redes com nomes dentro de padrões definidos, tipo <b>PROV_2Gxxxx</b><br>
+2. Pega o endereço MAC do roteador<br>
+3. Baseado no nome do provedor, monta o que seria a senha padrão<br>
+4. Tenta conectar na rede com a senha padrão<br>
+5. Caso consiga conectar, faz PING em um servidor DNS para testar conexão<br>
+6. Caso o PING retorne OK, acessa um serviço que retorna o IP público do roteador<br>
+7. Salva em um banco de dados: nome da rede, senha, IP, última vez que acessou a rede<br>
+<br>
+E fim.
