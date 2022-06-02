@@ -9,7 +9,7 @@ Para testar, pedi a amigos e vizinhos que assinam diferentes serviços de intern
 
 Agora vamos ao que interessa...
 
-# Padrões 
+# Padrões
 Para configurar roteadores (modems) de forma sequencial/rápida, empresas basearam a configuração em padrões. Isso serviu apenas para facilitar e agilizar a configuração dos aparelhos quando eles chegavam do fornecedor, podendo enviar para o usuário final rapidamente.<br>
 <br>
 Estamos em 2010. Imagine que a empresa XYZ entrega 10.000 novos aparelhos por mês pelo país. Criar senhas, armazenar, imprimir adesivos para colar atrás do aparelho, configurar todo o sistema para esses dados... não, isso exigiria infraestrutura (gente), desenvolvimento de software e logística de armazenamento de dados - cada aparelho precisaria ter os dados escritos no firmware e cadastrado em uma base de dados. isso tudo geraria custo.<br>
@@ -20,3 +20,8 @@ Sim, o endereço MAC do seu roteador fica aberto a qualquer pessoa que esteja po
 <br>
 Então, se a sua senha for baseada nesse endereço MAC, dá pra adivinhar, né? Pronto. Temos aí boa partes das redes do país.<br>
 ?)
+
+# Provedores
+Temos diversos provedores. A questão é que muitos deles pertecem a outro. X comprou Y que comprou Z e hoje, na verdade, temos as grandes telefônicas provendo internet. Então se você paga a empresa C ou V ou N, não muda muito. Elas todas compram os aparelhos do mesmo lugar e configuram do mesmo jeito. Ainda bem que isso mudou, mas tem muito modem aí configurado baseado no endereço MAC.<br>
+<br>
+O endereço MAC é tipo um número serial. Ele representa um monte de coisa: fabricante, versão, ano... ele guarda bastante informação. mas voltando pro foco: o endereço MAC compõe a senha do WiFi de casa. E ele tá aberto.
