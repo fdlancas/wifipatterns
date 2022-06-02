@@ -34,11 +34,12 @@ Portanto, por um longo período de tempo, os provedores enviavam roteadores/mode
 Após algum tempo, provedores passaram a adicionar alguns caracteres ao nome da rede que não faziam parte do endereço MAC, para aumentar a dificuldade de pessoas sem permissão acessarem redes com a configuração padrão. Então, começaram a definir senhas como <b>AABBCC1122<i>GG</i></b>, onde "GG" são caracteres que não estão no endereço MAC. Parece um pouco mais seguro, correto? O problema é que esses caracteres "randômicos" (GG nesse exemplo) precisavam estar acessíveis de alguma forma. Então começou-se uma fórmula "genial" de colocar eles no nome da rede. Assim, novas redes vinham definidas da seguinte forma:<br>
 <br>
 Nome: <b>PROV-22GG</b><br>
-Senha: <b>AABBCC1122GG</b>
+Senha: <b>AABBCC1122GG</b><br>
 <br>
 E é simplesmente por esse tipo de padrão que esse script procura.<br>
+<br>
 Tendo ficado um pouco à toa durante a pandemia de 2020-2021, lembrei desses padrões bobos e resolvi testar. Tendo 2 provedores contratados (caso um deles caia, o outro deve continuar funcionando), simplesmente olhei atrás dos modems/roteadores e notei que seguiam esses padrões.<br>
-Resolvi então pedir pra alguns amigos enviarem foto da parte de trás dos modems deles e vários seguiam esses padrões; exceto os aparelhos de 5 anos pra cá - nesses a senha não tem absolutamente nenhuma relação com o endereço MAC.<br>
+Pedi então para alguns amigos enviarem foto da parte de trás dos modems deles e vários seguiam esses padrões; exceto os aparelhos de 5 anos pra cá - nesses a senha não tem absolutamente nenhuma relação com o endereço MAC.<br>
 <br>
 Portanto, esse script faz o seguinte:<br>
 1. Procura redes com nomes dentro de padrões definidos, tipo <b>PROV_2Gxxxx</b><br>
@@ -47,7 +48,7 @@ Portanto, esse script faz o seguinte:<br>
 4. Tenta conectar na rede com a senha padrão<br>
 5. Caso consiga conectar, faz PING em um servidor DNS para testar conexão<br>
 6. Caso o PING retorne OK, acessa um serviço que retorna o IP público do roteador<br>
-7. Salva em um banco de dados: nome da rede, senha, IP, última vez que acessou a rede<br>
+7. Salva em um banco de dados: <i>nome da rede, senha, IP, última vez que acessou a rede</i><br>
 <br>
 E fim.<br>
 <br>
@@ -60,4 +61,6 @@ Os celulares de hoje têm GPS interno, o que possibilita pegar essa localizaçã
 <br>
 Então, se você não quiser marcar a localização das redes, não precisa abrir o site. Não precisa ter o celular por perto. Basta acessar o aparelho (computador? celular? raspberry pi?) via ssh e rodar o script.<br>
 <br>
-Porém, tendo feito a interface, adicionei algumas funções básicas: iniciar o script, parar o script, desligar o aparelho e mostrar senha já testada com sucesso.
+Porém, tendo feito a interface, adicionei algumas funções básicas: iniciar o script, parar o script, desligar o aparelho e mostrar senha já testada com sucesso.<br>
+<br>
+Esse script depende de coisas bem simples, que até um celular antigo (com acesso total a tudo) pode rodar. Basta instalar os programas e dependências, pois o processamento é mínimo; quase zero.
