@@ -58,6 +58,6 @@ Procurei diversos métodos (posição baseada em IP, baseada no MAC, usando blue
 <br>
 Os celulares de hoje têm GPS interno, o que possibilita pegar essa localização. O problema é onde cada aparelho salva isso e como acessar. Então pensei em uma gambiarra: e se usarmos html5 pra pegar essa localização? Foi aí que decidi criar uma interface. O principal intuito dela não é mostrar redes, mas sim usar o GPS do celular pra pegar a localização. Então, já que precisaria ficar com o celular ligado, com o navegador aberto em um site, escolhi fazer uma interface discreta que simula um tocador de música. Assim, ao chegar num bar, poderia deixar o celular ligado, com essa interface aberta, sem chamar atenção.<br>
 <br>
-Então, se você não quiser marcar a localização das redes, não precisa abrir o site. Não precisa ter o celular por perto. Basta acessar o aparelho via ssh e rodar o script.<br>
+Então, se você não quiser marcar a localização das redes, não precisa abrir o site. Não precisa ter o celular por perto. Basta acessar o aparelho (computador? celular? raspberry pi?) via ssh e rodar o script.<br>
 <br>
-Porém, tedo feito a interface, adicionei algumas funções básicas: iniciar o script, parar o script, desligar o aparelho, mostrar senha testada com sucesso.
+Porém, tendo feito a interface, adicionei algumas funções básicas: iniciar o script, parar o script, desligar o aparelho e mostrar senha já testada com sucesso.
