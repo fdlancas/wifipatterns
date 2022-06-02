@@ -16,10 +16,10 @@ Estamos em 2010. Imagine que a empresa XYZ entrega 10.000 novos aparelhos por m�
 O mais fácil? Replicar o que vinha do fornecedor - uma senha baseada nos dados que eles tinham, o <b>endereço MAC da placa de rede</b> do aparelho.<br>
 <br>
 E foi assim que nossos modems/roteadores foram configurados: baseados num número que identifica a placa de rede dentro deles. A melhor parte? Isso fica público.<br>
-Sim, o endereço MAC do seu roteador fica aberto a qualquer pessoa que esteja por perto. Isso é porque, da maneira que os aparelhos se conectam hoje em dia, o endereço MAC é a única coisa que é identificável, ele é único. Então, se tiver duas redes chamadas "Joao WiFi" por perto, mas eu já conectei na sua e meu celular entra nela de novo direto, isso é porque o endereço MAC da placa de rede do seu roteador já foi salvo pra mim. É assim que meu celular sabe que o seu "Joao WiFi" é diferente do "Joao WiFi" do vizinho. Meu celular tenta conectar na rede que tem o MAC salvo, e só aí testa a senha.<br>
+Sim, o endereço MAC do seu roteador fica aberto a qualquer pessoa que esteja por perto. Isso é porque, da maneira que os aparelhos se conectam hoje em dia, o endereço MAC é a única informação pública verificável. E ele é, de certa maneira, único.<br>
+Então, se tiver duas redes chamadas "<i>Joao WiFi</i>" por perto, mas eu já conectei na sua, meu celular entra nela de novo direto. Isso acontece porque o endereço MAC da placa de rede do seu roteador já foi salvo no meu celular, associado ao nome da sua rede. É assim que meu celular sabe que o seu "<i>Joao WiFi</i>" é diferente do "<i>Joao WiFi</i>" do vizinho. Meu celular tenta conectar na rede que tem o MAC salvo, não na rede com o nome salvo.<br>
 <br>
-Então, se a sua senha for baseada nesse endereço MAC, dá pra adivinhar, né? Pronto. Temos aí boa partes das redes do país.<br>
-?)
+Então, se a sua senha for baseada nesse endereço MAC, dá pra descobrir? Isso.
 
 # Provedores
 Temos diversos provedores. A questão é que muitos deles pertecem a outro. X comprou Y que comprou Z e hoje, na verdade, temos as grandes telefônicas provendo internet. Então se você paga a empresa C ou V ou N, não muda muito. Elas todas compram os aparelhos do mesmo lugar e configuram do mesmo jeito. Ainda bem que isso mudou, mas tem muito modem aí configurado baseado no endereço MAC.<br>
@@ -49,4 +49,15 @@ Portanto, esse script faz o seguinte:<br>
 6. Caso o PING retorne OK, acessa um serviço que retorna o IP público do roteador<br>
 7. Salva em um banco de dados: nome da rede, senha, IP, última vez que acessou a rede<br>
 <br>
-E fim.
+E fim.<br>
+<br>
+
+# Extra
+Depois de alguns testes achei divertido não só salvar esses dados, mas também a localização de cada rede encontrada.<br>
+Procurei diversos métodos (posição baseada em IP, baseada no MAC, usando bluetooth, etc.), mas nenhum era preciso suficiente. Existem serviços *gratuitos* que retornam esse tipo de informação, mas eu queria algo que não dependesse de nenhum tipo de conexão com nada. É aí que entra o celular.<br>
+<br>
+Os celulares de hoje têm GPS interno, o que possibilita pegar essa localização. O problema é onde cada aparelho salva isso e como acessar. Então pensei em uma gambiarra: e se usarmos html5 pra pegar essa localização? Foi aí que decidi criar uma interface. O principal intuito dela não é mostrar redes, mas sim usar o GPS do celular pra pegar a localização. Então, já que precisaria ficar com o celular ligado, com o navegador aberto em um site, escolhi fazer uma interface discreta que simula um tocador de música. Assim, ao chegar num bar, poderia deixar o celular ligado, com essa interface aberta, sem chamar atenção.<br>
+<br>
+Então, se você não quiser marcar a localização das redes, não precisa abrir o site. Não precisa ter o celular por perto. Basta acessar o aparelho via ssh e rodar o script.<br>
+<br>
+Porém, tedo feito a interface, adicionei algumas funções básicas: iniciar o script, parar o script, desligar o aparelho, mostrar senha testada com sucesso.
