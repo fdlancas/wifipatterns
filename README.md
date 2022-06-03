@@ -59,12 +59,11 @@ E fim.
 <b>- position_data.txt</b> esse arquivo única e exclusivamente salva a latitude e longitude que o telefone encontra enquanto mantém a interface aberta.<br>
 <b>[log/]</b> (diretório): guarda logs de "sessões" de busca por wifi. O nome de cada arquivo é criado baseado no horário que o scan foi iniciado.<br>
 <b>index.php</b>: interface "web"<br>
-<pre>
-  <b>start</b>: start wifipatterns.py<br>
-  <b>stop</b>: stop wifipatterns.py<br>
-  <b>loop</b>: ability to loop reading results and getting location data (from your phone)<br>
-  <b>shutdown</b>: shutdown the device (power off)<br>
-</pre>
+<b> > start</b>: start wifipatterns.py<br>
+<b> > stop</b>: stop wifipatterns.py<br>
+<b> > loop</b>: ability to loop reading results and getting location data (from your phone)<br>
+<b> > shutdown</b>: shutdown the device (power off)<br>
+
 
 # Extra
 Depois de alguns testes achei divertido não só salvar esses dados, mas também a localização de cada rede encontrada.<br>
