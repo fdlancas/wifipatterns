@@ -53,6 +53,17 @@ Portanto, esse script faz o seguinte:<br>
 <br>
 E fim.
 
+# Como Funciona
+<b>- wifipatterns.py</b>: script (python) principal que procura as redes, tenta logar e salva
+<b>- log_lat_long.php</b> script (php) que lê (via GET) a localização encontrada pelo index.php (constantemente aberto) e envia para o arquivo <b>-positions_data.txt</b>.
+<b>- position_data.txt</b> esse arquivo única e exclusivamente salva a latitude e longitude que o telefone encontra enquanto mantém a interface aberta.
+<b>[log/]</b> (diretório): guarda logs de "sessões" de busca por wifi. O nome de cada arquivo é criado baseado no horário que o scan foi iniciado.
+index.php main web interface
+. start: start wifipatterns.py
+. stop: stop wifipatterns.py
+. loop: ability to loop reading results and getting location data (from your phone)
+. shutdown: shutdown the device (power off)
+
 # Extra
 Depois de alguns testes achei divertido não só salvar esses dados, mas também a localização de cada rede encontrada.<br>
 Procurei diversos métodos (posição baseada em IP, baseada no MAC, usando bluetooth, etc.), mas nenhum era preciso suficiente. Existem serviços *gratuitos* que retornam esse tipo de informação, mas eu queria algo que não dependesse de nenhum tipo de conexão com nada. É aí que entra o celular.<br>
