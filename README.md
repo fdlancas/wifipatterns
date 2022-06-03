@@ -31,10 +31,11 @@ Endereços MAC são compostos por 6 blocos de 2 caracteres cada e estão present
 <br>
 Portanto, por um longo período de tempo, os provedores enviavam roteadores/modems usando o MAC inteiro como senha. Até cerca de 2010 era extremamente comum encontrar diversas redes por aí com nomes tipo <b>PROV-2233</b>, sendo "PROV" o nome do provedor e "2233" o final do MAC da placa do roteador. E, adivinhe... a senha era <b>AABBCC112233</b> - o endereço MAC inteiro. E ainda tem muito roteador por aí com esse padrão.<br>
 <br>
-Após algum tempo, provedores passaram a adicionar alguns caracteres ao nome da rede que não faziam parte do endereço MAC, para aumentar a dificuldade de pessoas sem permissão acessarem redes com a configuração padrão. Então, começaram a definir senhas como <b>AABBCC1122<i>GG</i></b>, onde "GG" são caracteres que não estão no endereço MAC. Parece um pouco mais seguro, correto? O problema é que esses caracteres "randômicos" (GG nesse exemplo) precisavam estar acessíveis de alguma forma. Então começou-se uma fórmula "genial" de colocar eles no nome da rede. Assim, novas redes vinham definidas da seguinte forma:<br>
+Após algum tempo, provedores passaram a adicionar alguns caracteres à senha que não faziam parte do endereço MAC, para aumentar a dificuldade de pessoas sem permissão acessarem redes com a configuração padrão. Então, começaram a definir senhas como <b>AABBCC1122<i>GG</i></b>, onde "GG" são caracteres que não estão no endereço MAC.<br>
+Parece mais seguro, certo? O problema é que esses caracteres "randômicos" (<i>GG</i> nesse exemplo) precisavam estar armazenados em algum lugar do roteador. E adivinha onde decidiram guardar isso? No nome da rede. Então, novas redes vinham definidas da seguinte forma:<br>
 <br>
 Nome: <b>PROV-22GG</b><br>
-Senha: <b>AABBCC1122GG</b><br>
+Senha: <b>AABBCC1122GG</b> - últimos 2 caracteres do MAC trocados por 2 outros, <i>GG</i> nesse exemplo.<br>
 <br>
 E é simplesmente por esse tipo de padrão que esse script procura.<br>
 <br>
