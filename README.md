@@ -1,3 +1,5 @@
+# NÃO USE NADA AQUI PARA COMETER NENHUMA CONTRAVENÇÃO. TUDO NESSE REPOSITÓRIO SEGUE A LEI DE CÓDIGO LIVRE E O OBJETIVO É ALERTAR AS PESSOAS SOBRE POTENCIAS FALHAS EM SUAS REDES DOMÉSTICAS.
+
 # wifipatterns
 Configurações padrão de empresas de internet geram um sério risco para usuários caseiros.
 
