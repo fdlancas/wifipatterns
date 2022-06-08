@@ -13,7 +13,8 @@ Agora vamos ao que interessa...
 # Padrões
 Para configurar roteadores (modems) de forma sequencial/rápida, empresas basearam a configuração em padrões. Isso serviu apenas para facilitar e agilizar a configuração dos aparelhos quando eles chegavam do fornecedor, podendo enviar para o usuário final rapidamente.<br>
 <br>
-Estamos em 2010. Imagine que a empresa XYZ entrega 10.000 novos aparelhos por mês pelo país. Criar senhas, armazenar, imprimir adesivos para colar atrás do aparelho, configurar todo o sistema para esses dados... não, isso exigiria infraestrutura (gente), desenvolvimento de software e logística de armazenamento de dados - cada aparelho precisaria ter os dados escritos no firmware e cadastrado em uma base de dados. isso tudo geraria custo.<br>
+Coloque-se em 2010. John Mayer tocando ou se preferir aquela banda sueca de rock que ninguém conhecia até então. O mood é com você<br>
+Imagine que a empresa XYZ entrega 10.000 novos aparelhos por mês pelo país. Criar senhas, armazenar, imprimir adesivos para colar atrás do aparelho, configurar todo o sistema para esses dados... não, isso exigiria infraestrutura (gente), desenvolvimento de software e logística de armazenamento de dados - cada aparelho precisaria ter os dados escritos no firmware e cadastrado em uma base de dados. isso tudo geraria custo.<br>
 O mais fácil? Replicar o que vinha do fornecedor - uma senha baseada nos dados que eles tinham, o <b>endereço MAC da placa de rede</b> do aparelho.<br>
 <br>
 E foi assim que nossos modems/roteadores foram configurados: baseados num número que identifica a placa de rede dentro deles. A melhor parte? Isso fica público.<br>
