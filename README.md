@@ -2,7 +2,10 @@
 
 # wifipatterns
 Configurações padrão de empresas de internet geram um sério risco para usuários caseiros.
-
+<br>
+Tendo ficado um pouco à toa durante a pandemia de 2020-2021, lembrei desses padrões bobos e resolvi testar. Tendo 2 provedores contratados (caso um deles caia, o outro deve continuar funcionando), simplesmente olhei atrás dos modems/roteadores e notei que seguiam esses padrões.<br>
+Pedi então para alguns amigos enviarem foto da parte de trás dos modems deles e vários seguiam esses padrões; exceto os aparelhos de 5 anos pra cá - nesses a senha não tem absolutamente nenhuma relação com o endereço MAC.<br>
+<br>
 
 # Objetivo
 O intuito principal disso é alertar pessoas sobre como o serviço oferecido por provedores de internet não oferece a segurança esperada para quem assina (contrata) o serviço.<br>
@@ -43,10 +46,7 @@ Nome: <b>PROV-22GG</b><br>
 Senha: <b>AABBCC1122GG</b> - últimos 2 caracteres do MAC trocados por 2 outros, <i>GG</i> nesse exemplo.<br>
 <br>
 E é simplesmente por esse tipo de padrão que esse script procura.<br>
-<br>
-Tendo ficado um pouco à toa durante a pandemia de 2020-2021, lembrei desses padrões bobos e resolvi testar. Tendo 2 provedores contratados (caso um deles caia, o outro deve continuar funcionando), simplesmente olhei atrás dos modems/roteadores e notei que seguiam esses padrões.<br>
-Pedi então para alguns amigos enviarem foto da parte de trás dos modems deles e vários seguiam esses padrões; exceto os aparelhos de 5 anos pra cá - nesses a senha não tem absolutamente nenhuma relação com o endereço MAC.<br>
-<br>
+
 Portanto, esse script faz o seguinte:<br>
 1. Procura redes com nomes dentro de padrões definidos, tipo <b>PROV_2Gxxxx</b><br>
 2. Pega o endereço MAC do roteador<br>
