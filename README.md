@@ -3,6 +3,7 @@ Configurações padrão de empresas de internet geram um sério risco para usuá
 
 
 # Objetivo
+O intuito principal disso é alertar pessoas sobre como o serviço oferecido por provedores de internet não oferece a segurança esperada para quem assina (contrata) o serviço.<br>
 Tive a ideia desse projeto depois de muitos anos que percebi como as empresas de internet expõe os dados dos usuários. Isso não é mais tão recorrente, porém, como notei que muitas redes continuam com os mesmos padrões, achei válido escrever esse texto e script para alertar usuários e empresas.<br>
 O intuito desse script é SOMENTE demonstrar como estamos vulneráveis com nosso Wi-Fi de casa configurado pela empresa de internet e nunca alterando os dados de segurança.<br>
 Para testar, pedi a amigos e vizinhos que assinam diferentes serviços de internet, de diferentes empresas para testar os padrões. Obrigado a todos que me ajudaram nesses testes, teria sido impossível sem vocês.
