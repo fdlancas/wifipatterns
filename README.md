@@ -7,7 +7,7 @@ O intuito principal disso é alertar pessoas sobre como o serviço oferecido por
 Tive a ideia desse projeto depois de muitos anos que percebi como as empresas de internet expõe os dados dos usuários. Isso não é mais tão recorrente, porém, como notei que muitas redes continuam com os mesmos padrões, achei válido escrever esse texto e script para alertar usuários e empresas.<br>
 O intuito desse script é SOMENTE demonstrar como estamos vulneráveis com nosso Wi-Fi de casa configurado pela empresa de internet e nunca alterando os dados de segurança.<br>
 Para testar, pedi a amigos e vizinhos que assinam diferentes serviços de internet, de diferentes empresas para testar os padrões. Obrigado a todos que me ajudaram nesses testes, teria sido impossível sem vocês.
-
+<br>
 Agora vamos ao que interessa...
 
 # Padrões
@@ -18,6 +18,7 @@ Imagine que a empresa XYZ entrega 10.000 novos aparelhos por mês pelo país. Cr
 O mais fácil? Replicar o que vinha do fornecedor - uma senha baseada nos dados que eles tinham, o <b>endereço MAC da placa de rede</b> do aparelho.<br>
 <br>
 E foi assim que nossos modems/roteadores foram configurados: baseados num número que identifica a placa de rede dentro deles. A melhor parte? Isso fica público.<br>
+<br>
 Sim, o endereço MAC do seu roteador fica aberto a qualquer pessoa que esteja por perto. Isso é porque, da maneira que os aparelhos se conectam hoje em dia, o endereço MAC é a única informação pública verificável. E ele é, de certa maneira, único.<br>
 Então, se tiver duas redes chamadas "<i>Joao WiFi</i>" por perto, mas eu já conectei na sua, meu celular entra nela de novo direto. Isso acontece porque o endereço MAC da placa de rede do seu roteador já foi salvo no meu celular, associado ao nome da sua rede. É assim que meu celular sabe que o seu "<i>Joao WiFi</i>" é diferente do "<i>Joao WiFi</i>" do vizinho. Meu celular tenta conectar na rede que tem o MAC salvo, não na rede com o nome salvo.<br>
 <br>
